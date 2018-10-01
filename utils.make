@@ -23,7 +23,7 @@ INCLUDE_DIRS	?=	include/
 ################################################################################
 
 CXXFLAGS	+=	-W -Wall -Wextra
-CXXFLAGS	+=	$(addprefix -I,$(INCLUDE_DIR))
+CXXFLAGS	+=	$(addprefix -I,$(INCLUDE_DIRS))
 CXXFLAGS	+=	$(patsubst %,-I%/include/,$(LIBS_PATHS))
 
 LDFLAGS	+=	$(addprefix -l,$(GLOBAL_LIBS))
